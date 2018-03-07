@@ -1,0 +1,23 @@
+<h1>String Interpolation</h1>
+<p>String: {{aString}}</p>
+<p>Number: {{aNumber}}</p>
+
+<hr>
+
+<h1>Property Binding</h1>
+<p [innerText]="aString"></p>
+<div>
+    <input type="text" value="{{aNumber}}">
+</div>
+<div [ngClass]="{'red-border': attachClass}" [ngStyle]= "{'background-color': 'blue'}">Roter Rahmen Box</div>
+
+<app-property-binding [name]="'Max'"></app-property-binding>
+
+<h3>Event Binding</h3>
+<button (click)="onClick($event)">click mich</button>
+
+<app-event-binding (clicked)="aString = $event"></app-event-binding>
+
+<hr>
+<h4>Two-way-binding</h4>
+<input type="text" [(ngModel)]="aString">
